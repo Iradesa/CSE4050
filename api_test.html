@@ -1,0 +1,25 @@
+<head>
+   <title> API Assignment - Pokemon API </title>
+</head>
+
+<body>
+
+<div id = "pokemon">
+</div>
+
+<script>
+fetch("https://pokeapi.co/api/v2/pokemon/eevee")
+.then(response => response.json())
+.then(data => {
+  const d = new String(data.species.name);
+  console.log(d);
+  document.getElementById("pokemon").innerHTML = "My favorite Pokemon is " + d;
+});
+
+
+//document.getElementById("pokemon").innerHTML = "this is a test";
+
+</script>
+
+</body>
+</html>
